@@ -23,8 +23,8 @@ class Wunschmaschine:
             self.blockaden += "\n- Überlege, ob dein Wunsch aus Freude oder Angst stammt."
         else:
             self.essenz_check = "❓ Du bist unsicher."
-            self.blockaden += "\n- Was bedeutet höchstes Selbst für dich? Welche Absicht steckt hinter deinem Wunsch?"
-    
+            st.warning("🔍 Reflexionsübung:\n- Was bedeutet dein höchstes Selbst für dich?\n- Stelle dir vor, dein Wunsch ist erfüllt. Fühlt es sich nach Liebe oder nach Angst an?\n- Frage dich: Würde mein höheres Selbst diesen Wunsch aus tiefstem Herzen wählen?")
+
     def kausal_pruefung(self):
         antwort = st.radio("Kausale Ebene: Glaubst du zu 100%, dass dein Wunsch möglich ist?", ("Ja", "Nein", "Ich weiß es nicht"))
         if antwort == "Ja":
@@ -34,9 +34,8 @@ class Wunschmaschine:
             self.blockaden += "\n- Gibt es Beweise, dass es nicht geht? Kannst du Gegenbeweise finden?"
         else:
             self.kausal_check = "❓ Du bist unsicher."
-            self.blockaden += "\n- Woher stammt deine Unsicherheit? Welche Überzeugungen hast du darüber?"
+            st.warning("🔍 Reflexionsübung:\n- Welche Beweise hast du, dass es klappen könnte?\n- Gibt es Menschen, die das bereits geschafft haben?\n- Welcher kleine erste Schritt würde dir zeigen, dass dein Wunsch möglich ist?")
 
-    
     def energie_pruefung(self):
         antwort = st.radio("Energie-Ebene: Fühlst du dich bereits so, als wäre dein Wunsch erfüllt?", ("Ja", "Nein", "Ich weiß es nicht"))
         if antwort == "Ja":
@@ -46,8 +45,8 @@ class Wunschmaschine:
             self.blockaden += "\n- Welche Emotionen verbindest du mit deinem Wunsch? Wie kannst du dich mehr in die Erfüllung hineinversetzen?"
         else:
             self.energie_check = "❓ Du bist unsicher."
-            self.blockaden += "\n- Was hindert dich daran, dich bereits jetzt erfüllt zu fühlen?"
-    
+            st.warning("🔍 Reflexionsübung:\n- Wie fühlt sich dein Leben an, wenn dein Wunsch erfüllt ist?\n- Spiele gedanklich mit dieser Realität – was verändert sich?\n- Mache eine Visualisierungsübung: Schließe die Augen und stelle dir vor, dein Wunsch ist wahr geworden.")
+
     def physisch_pruefung(self):
         antwort = st.radio("Physische Ebene: Hast du bereits konkrete Handlungen unternommen?", ("Ja", "Nein", "Ich weiß es nicht"))
         if antwort == "Ja":
@@ -57,8 +56,8 @@ class Wunschmaschine:
             self.blockaden += "\n- Welche ersten konkreten Schritte kannst du setzen?"
         else:
             self.physisch_check = "❓ Du bist unsicher."
-            self.blockaden += "\n- Was hindert dich daran, aktiv zu werden?"
-    
+            st.warning("🔍 Reflexionsübung:\n- Was wäre der kleinste Schritt, den du heute unternehmen kannst?\n- Gibt es eine inspirierende Person, die du um Rat fragen kannst?\n- Schreibe 3 Ideen auf, wie du deinem Wunsch aktiv näher kommst.")
+
     def hoeheres_selbst_pruefung(self):
         antwort = st.radio("Höheres Selbst: Vertraust du dem Universum und deiner Führung?", ("Ja", "Nein", "Ich weiß es nicht"))
         if antwort == "Ja":
@@ -68,8 +67,8 @@ class Wunschmaschine:
             self.blockaden += "\n- Welche Erfahrungen haben dein Vertrauen ins Universum beeinflusst?"
         else:
             self.hoeheres_selbst = "❓ Du bist unsicher."
-            self.blockaden += "\n- Wie könntest du lernen, mehr zu vertrauen?"
-    
+            st.warning("🔍 Reflexionsübung:\n- Welche Momente in deinem Leben haben dir gezeigt, dass du geführt wirst?\n- Was wäre, wenn das Universum bedingungslos für dich sorgt?\n- Stelle dir vor, dein Wunsch ist bereits erfüllt – wie fühlt sich das an?")
+
     def manifestieren(self):
         st.title("✨ Wunschmaschine ✨")
         self.ziel_eingeben()
